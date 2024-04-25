@@ -1,0 +1,6 @@
+**/*.dbgmodule
+**/*.json
+**/*.fs
+*.dbgmodule
+*.json
+*.fs
