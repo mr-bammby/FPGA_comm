@@ -5,7 +5,7 @@ module uart_tx
 )
 (
     output tx_pin,
-    output [5:0] led,
+    output [2:0] led,
     input clk,
     input [BIT_PER_WORD:0] data,
     input data_ready,

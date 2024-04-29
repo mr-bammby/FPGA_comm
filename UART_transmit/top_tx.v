@@ -1,7 +1,7 @@
 module top
 (
     input clk,
-    output [5:0] led,
+    output [2:0] led,
     output uartTx,
     input btn
 );
