@@ -1,6 +1,10 @@
 **/*.dbgmodule
 **/*.json
 **/*.fs
+**/*.o
+**/*.vcd
 *.dbgmodule
 *.json
 *.fs
+*.o
+*.vcd
