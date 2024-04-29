@@ -1,0 +1,23 @@
+IO_LOC  "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "led_err[0]" 10;
+IO_PORT "led_err[0]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "led_err[1]" 11;
+IO_PORT "led_err[1]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "led_res[0]" 13;
+IO_PORT "led_res[0]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "led_res[1]" 14;
+IO_PORT "led_res[1]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "led_res[2]" 15;
+IO_PORT "led_res[2]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "led_res[3]" 16;
+IO_PORT "led_res[3]" DRIVE=8 IO_TYPE=LVCMOS18;
+
+IO_LOC  "uartRx" 18;
+IO_PORT "uartRx" IO_TYPE=LVCMOS33 PULL_MODE=UP;
