@@ -26,4 +26,4 @@ File list:
 	top.v: Simple program that asks for four letter pin and check it against preprogrammed one.
 			Sending triggerd by pressing "button".
 
-    top.cst configuration for top module compatible with Tang Nano 9k dev board
+    top.cst configuration for top module compatible with Tang Nano 9k dev board.
