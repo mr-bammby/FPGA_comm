@@ -23,11 +23,13 @@ localparam STATE_END_CHK    = 4;
 
 wire done;
 wire newBuffer;
+wire send;
 reg new_data = 0;
 wire [BIT_PER_WORD:0] data;
 reg [2:0] state = STATE_INIT;
 reg new_transmition = 0; 
 reg old_data_clk = 0;
+reg old_done = 0;
 reg buffer_write = 0;
 reg buffer_read = 0;
 wire empty;
@@ -59,6 +61,7 @@ buffer(.clk(clk),
 
 always @(posedge clk) begin
     old_data_clk <= data_clk;
+	old_done <= done;
 	if ((newBuffer == 1) && (busy == 0)) begin 
 		buffer_write <= 1;
 	end
@@ -89,7 +92,7 @@ always @(posedge clk) begin
 			new_data <= 1;
         end
         STATE_WAIT : begin
-            if (done == 1 ) begin
+            if (send == 1 ) begin
                 state <= STATE_END_CHK;
                 new_data <= 0;
             end
@@ -104,6 +107,7 @@ always @(posedge clk) begin
 end
 
 assign newBuffer = data_clk && !old_data_clk;
+assign send = done && !old_done;
 assign state_out = state;
 assign idle = idle_reg;
 
